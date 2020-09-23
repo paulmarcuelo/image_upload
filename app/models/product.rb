@@ -2,7 +2,7 @@ class Product < ApplicationRecord
     has_many_attached :images
     validates :name, presence: true
     validates :description, presence: true
-    validate :image_type
+    # validate :image_type
 
     def thumbnail
         return self.variant(resize: "300x300!").processed
